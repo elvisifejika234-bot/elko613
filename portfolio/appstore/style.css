@@ -1,0 +1,445 @@
+/* ============================================
+   Elko Appstore
+   Palette: near-black + saturated gold, techy feel
+   Type: Space Grotesk (display) + Inter (body/UI)
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+    --bg: #0a0a0a;
+    --panel: #131313;
+    --panel-soft: #1a1a1a;
+    --text: #f5f2ea;
+    --muted: #a7a196;
+    --gold: #cda449;
+    --gold-bright: #f0c869;
+    --border: rgba(205, 164, 73, 0.28);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+h1, h2, h3, .logo-text {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+main {
+    background: var(--bg);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ---------- Header ---------- */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 14px 30px;
+    background: rgba(10, 10, 10, 0.96);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    backdrop-filter: blur(6px);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.logo img {
+    width: 40px;
+    height: auto;
+}
+
+.logo-text {
+    font-weight: 700;
+    font-size: 1.3rem;
+    letter-spacing: 0.01em;
+    color: var(--gold);
+}
+
+.search-bar input.app-input {
+    background: var(--panel-soft);
+    border: 1px solid var(--border);
+    padding: 10px 16px;
+    border-radius: 8px;
+    color: var(--text);
+    font-size: 0.95rem;
+    outline: none;
+    width: 220px;
+    transition: width 0.3s ease, border-color 0.3s ease;
+}
+
+.search-bar input.app-input::placeholder {
+    color: var(--muted);
+}
+
+.search-bar input.app-input:focus {
+    width: 280px;
+    border-color: var(--gold);
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 9px 18px;
+    border-radius: 8px;
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--gold);
+    font-weight: 600;
+    font-size: 0.92rem;
+    text-decoration: none;
+    transition: 0.25s ease;
+}
+
+.btn:hover,
+.btn.active {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: #0a0a0a;
+}
+
+/* ---------- Hero ---------- */
+.hero-section {
+    position: relative;
+    text-align: center;
+    padding: 120px 20px 90px;
+    background: linear-gradient(180deg, rgba(10, 10, 10, 0.55) 0%, rgba(10, 10, 10, 0.92) 75%, #0a0a0a 100%),
+                url('img/phoneapps.jpg');
+    background-size: cover;
+    background-position: center 25%;
+}
+
+.hero-section h1 {
+    font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
+}
+
+.hero-section h1 .accent {
+    color: var(--gold);
+}
+
+.hero-subtitle {
+    max-width: 640px;
+    margin: 0 auto 34px;
+    font-size: 1.1rem;
+    color: var(--muted);
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 13px 26px;
+    border-radius: 8px;
+    background: var(--gold);
+    border: 1px solid var(--gold);
+    color: #0a0a0a;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    background: transparent;
+    color: var(--gold-bright);
+}
+
+.btn-secondary {
+    display: inline-block;
+    padding: 13px 26px;
+    border-radius: 8px;
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.btn-secondary:hover {
+    border-color: var(--gold);
+    color: var(--gold-bright);
+}
+
+/* ---------- About ---------- */
+.about {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.about-content {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--gold);
+    border-radius: 8px;
+    padding: 34px 30px;
+}
+
+.about-content h2 {
+    color: var(--text);
+    margin-bottom: 12px;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+}
+
+.about-content p {
+    color: var(--muted);
+    font-size: 1.02rem;
+    max-width: 720px;
+}
+
+/* ---------- App grid ---------- */
+.App {
+    max-width: 1100px;
+    margin: 50px auto 90px;
+    padding: 0 20px;
+}
+
+.App h2 {
+    color: var(--text);
+    margin-bottom: 4px;
+    font-size: clamp(1.7rem, 3vw, 2.3rem);
+}
+
+.App > p {
+    color: var(--muted);
+    margin-bottom: 24px;
+}
+
+.App-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 18px;
+}
+
+.card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-height: 200px;
+    transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.card:hover {
+    border-color: var(--gold);
+    transform: translateY(-3px);
+}
+
+.card-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 9px;
+    background: var(--panel-soft);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    color: var(--gold);
+    font-size: 1.1rem;
+}
+
+.card h3 {
+    color: var(--text);
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.card-content {
+    color: var(--muted);
+    font-size: 0.92rem;
+    flex-grow: 1;
+}
+
+.card .btn-primary {
+    align-self: flex-start;
+    padding: 9px 18px;
+    font-size: 0.88rem;
+}
+
+.card .btn-primary.disabled {
+    background: var(--panel-soft);
+    border-color: var(--border);
+    color: var(--muted);
+    pointer-events: none;
+}
+
+/* ---------- Footer ---------- */
+footer {
+    background: #060606;
+    color: var(--muted);
+    padding: 46px 20px 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    border-top: 1px solid var(--border);
+}
+
+.top-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.top-footer img {
+    max-width: 120px;
+    height: auto;
+}
+
+.top-footer p {
+    margin: 0;
+    font-size: 0.92rem;
+    color: var(--muted);
+}
+
+.footer-nav {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.footer-nav a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.footer-nav a:hover {
+    color: var(--gold);
+}
+
+.social-links {
+    display: flex;
+    gap: 12px;
+}
+
+.social-links a {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 0.25s ease;
+}
+
+.social-links a i {
+    font-size: 1.2rem;
+    color: var(--gold);
+}
+
+.social-links a:hover {
+    border-color: var(--gold);
+    transform: translateY(-2px);
+}
+
+.bottom-footer {
+    width: 100%;
+    max-width: 900px;
+    border-top: 1px solid var(--border);
+    padding-top: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 0.85rem;
+    color: #6f6a60;
+}
+
+.bottom-footer p {
+    margin: 0;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 700px) {
+    .main-header {
+        flex-wrap: wrap;
+        padding: 14px 18px;
+    }
+
+    .search-bar {
+        order: 3;
+        width: 100%;
+    }
+
+    .search-bar input.app-input {
+        width: 100%;
+    }
+
+    .search-bar input.app-input:focus {
+        width: 100%;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+    }
+
+    .bottom-footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
