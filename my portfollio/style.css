@@ -1,0 +1,237 @@
+/* RESET CSS */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    outline: none;
+}
+
+body {
+    background: #000000;
+    color: #fff;
+    height: 100vh;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 60px;
+    background-color: transparent;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #599614;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.menu a {
+    font-size: 1.3rem;
+    color: white;
+    margin-left: 3rem;
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s ease;
+}
+
+.menu a:hover {
+    border-bottom: 2px solid #3fa008;
+    color: rgb(52, 97, 0);
+}
+
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 4rem 60px;
+}
+
+.hero-section .hero-content h1 {
+    font-size: 5rem;
+    font-weight: 800;
+    margin-bottom: 1.3rem;
+}
+ 
+.span {
+    color: #064e03;
+}
+
+.hero-section .hero-content h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero-section .hero-content p {
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    color: #bfbfbf;
+}
+
+.hero-img{
+    width: 50%;
+    border:2px solid #399e0a;
+    overflow: hidden;
+    width: 400px;
+    height: 400px;
+}
+
+.hero-img img {
+    width: 100%;
+    height: 100%;
+ 
+}
+
+.social-icons {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  height: 3rem;
+  background-color: transparent;
+  font-size: 1.5rem;
+}
+
+social icons a {
+    color: #fff;
+    margin: 0 1rem;
+    transition: 0.3s ease;
+}
+
+social icons a:hover {
+    color: #000000;
+    transform: scale(1.2);
+    background-color: #377200;
+
+}
+
+.btn {
+    padding: 1rem 2.5rem;
+    background-color: #000000;
+    color: #fff;
+    border: 2px solid #2e5f06;
+    font-size: 1.4rem;
+    letter-spacing: 0.5rem;
+    border:2px solid #06b414;
+    cursor: pointer;
+    font-weight: 600;
+    display: inline-block;
+    transition: 0.3s ease;
+    border-radius: 4rem;
+}
+
+.btn:hover {
+    background-color: #12d40c;
+    color: #000000;
+    transform: scale(1.1);
+    box-shadow: #2f6304;
+}
+
+.typing-text {
+font-size: 32px;
+font-weight: 600;
+min-width: 300px;
+}
+
+.typing-text span {
+  position: relative;
+}
+
+.typing-text span::before {
+  content: '';
+  background-color: transparent;
+  animation: careers 20s infinite;
+  color: #255f09;
+}
+
+.typing-text span::after {
+  content: '';
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 100%;
+  background-color: transparent;
+  animation: cursor 0.5s infinite;
+  right: -8px;
+}
+
+@keyframes cursor {
+  to {
+    border-left: 3px solid transparent;
+  }
+}
+
+@keyframes careers {
+  0% {
+    content: 'Junior Developer';
+  }
+  25% {
+    content: 'Front-End Developer';
+  }
+    50% {
+        content: 'YouTuber';
+    }
+    75% {
+        content: 'Content Creator';
+    }
+    100% {
+        content: 'car guy';
+    }
+}
+.contact-section {
+    flex-direction: column;
+    padding: 2rem 20px;
+}
+
+.contact-form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.contact-form .input-group {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    background-color: #111111;
+    border: 2px solid #2e5f06;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 0.8rem;
+    transition: 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #12d40c;
+    box-shadow: 0 0 10px rgba(18, 212, 12, 0.2);
+}
+
+.contact-form .subject-input {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .contact-form .input-group {
+        flex-direction: column;
+    }
+}
